@@ -5,14 +5,16 @@ $students = array(
     array("Name" => "Bianca", "NIM" => "220402", "Mobile" => "0812345687"),
     array("Name" => "Candice", "NIM" => "220403", "Mobile" => "0812345665")
 );
-
+echo "Data awal:<br>";
+var_dump($students);
 
 $students[] = array("Name" => "David", "NIM" => "220404", "Mobile" => "0812345611");
 $students[] = array("Name" => "Ethan", "NIM" => "220405", "Mobile" => "0812345622");
 $students[] = array("Name" => "Frank", "NIM" => "220406", "Mobile" => "0812345633");
 $students[] = array("Name" => "George", "NIM" => "220407", "Mobile" => "0812345644");
 $students[] = array("Name" => "Harry", "NIM" => "220408", "Mobile" => "0812345655");
-
+echo "<br>Data setelah ditambahkan:<br>";
+var_dump($students);
 
 echo "<table border='1' >";
 echo "<tr>
