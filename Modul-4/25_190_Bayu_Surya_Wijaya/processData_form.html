@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data Pribadi</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 680px; margin: 32px auto; padding: 0 16px; }
+        label { display: block; margin-top: 12px; }
+        input, textarea, select { box-sizing: border-box; width: 100%; padding: 8px; margin-top: 5px; }
+        .inline { display: inline-flex; align-items: center; gap: 8px; margin-right: 16px; }
+        .inline input { width: auto; }
+        button { margin-top: 16px; padding: 9px 14px; }
+    </style>
+</head>
+<body>
+    <h1>Form Data Pribadi</h1>
+    <form action="processData.php" method="POST">
+        <label for="surname">Surname</label>
+        <input type="text" id="surname" name="surname" required>
+
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="streetAddress">Street Address</label>
+        <textarea id="streetAddress" name="streetAddress" rows="3" required></textarea>
+
+        <label for="state">State</label>
+        <select id="state" name="state" required>
+            <option value="">-- Pilih state --</option>
+            <option value="New South Wales">New South Wales</option>
+            <option value="Queensland">Queensland</option>
+            <option value="South Australia">South Australia</option>
+            <option value="Tasmania">Tasmania</option>
+            <option value="Victoria">Victoria</option>
+            <option value="Western Australia">Western Australia</option>
+        </select>
+
+        <input type="hidden" name="country" value="Australia">
+
+        <p>Gender</p>
+        <label class="inline"><input type="radio" name="gender" value="Male" required> Male</label>
+        <label class="inline"><input type="radio" name="gender" value="Female"> Female</label>
+
+        <label class="inline"><input type="checkbox" name="vegetarian" value="Yes"> Vegetarian?</label>
+        <div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</body>
+</html>
